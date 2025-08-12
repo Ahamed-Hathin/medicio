@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+
+        .navbar .menu a{
+            text-decoration: none;
+            margin-right: 20px;
+            color: white;
+        }
+
+        #menu-toggle , #icon{
+            display: none;
+        }
+
+        @media screen and (max-width : 768px) {
+            .navbar .menu{
+                display: none;
+            }
+
+            #icon{
+                display: inline;
+            }
+
+            #menu-toggle:checked ~ .menu{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: black;
+                padding-left: 15px;
+                width: 100%;
+            }
+        }
+
+        /* input:checked + label{
+            color: red;
+        } */
+
+        div p{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <input type="checkbox" id="toggle">
+
+    <label for="toggle">
+        Hello
+    </label> -->
+
+    <div class="navbar">
+        <h1>Navbar</h1>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" id="icon">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </label>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+
+
+  
+</body>
+</html>
